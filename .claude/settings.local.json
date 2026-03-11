@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest frontend --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(cmd /c \"node --version && npm --version && npx --version\")",
+      "Bash(cmd /c \"node --version\")",
+      "Bash(cmd /c \"where node\")",
+      "Bash(cmd /c \"where node 2>&1\")",
+      "Bash(npm install framer-motion react-hook-form zod @hookform/resolvers lucide-react)",
+      "Bash(npm run build)",
+      "Bash(SRC=\"c:/Desenvolvimento/Claude Code/websiteGML/public/images\")",
+      "Bash(DST=\"c:/Desenvolvimento/Claude Code/websiteGML/frontend/public/images\")",
+      "Bash(cp \"$SRC/slider_volvo-2.jpg\" \"$DST/\")",
+      "Bash(cp \"$SRC/imagem_mgl.jpg\" \"$DST/\")",
+      "Bash(cp \"$SRC/Logo-mgl.png\" \"$DST/\")",
+      "Bash(cp \"$SRC/manutencao_carro-2.png\" \"$DST/\")",
+      "Bash(cp \"$SRC/roda_manutencao.png\" \"$DST/\")",
+      "Bash(DST=\"c:/Desenvolvimento/Claude Code/websiteGML/frontend/public/images/brands\")",
+      "Bash(cp \"$SRC/marca_toyota.png\" \"$DST/\")",
+      "Bash(cp \"$SRC/marca_volvo.png\" \"$DST/\")",
+      "Bash(cp \"$SRC/marca_fiat.png\" \"$DST/\")",
+      "Bash(cp \"$SRC/marca_jeep.png\" \"$DST/\")",
+      "Bash(cp \"$SRC/marca_Abarth.png\" \"$DST/\")"
+    ]
+  }
+}
