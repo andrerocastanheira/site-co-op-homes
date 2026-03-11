@@ -22,7 +22,9 @@
       "Bash(cp \"$SRC/marca_volvo.png\" \"$DST/\")",
       "Bash(cp \"$SRC/marca_fiat.png\" \"$DST/\")",
       "Bash(cp \"$SRC/marca_jeep.png\" \"$DST/\")",
-      "Bash(cp \"$SRC/marca_Abarth.png\" \"$DST/\")"
+      "Bash(cp \"$SRC/marca_Abarth.png\" \"$DST/\")",
+      "Bash(npm install:*)",
+      "Bash(node -e \"console.log\\(require\\(''./node_modules/next/package.json''\\).version\\)\")"
     ]
   }
 }
