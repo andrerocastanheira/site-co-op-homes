@@ -1,265 +1,289 @@
-# Directive: MGL Website — Protótipo de Alta Fidelidade
+# Directive: co.op.homes Website — Protótipo de Alta Fidelidade
 
 ## Objetivo
-Construir um site institucional moderno e premium para a MGL – Mendes Gomes.
-É um protótipo funcional com ar final — não precisa de dados reais mas deve
-parecer um produto acabado.
+Construir um site institucional moderno e premium para a **co.op.homes**, gestora de cooperativas de habitação que “reinventa a forma de comprar casa”.[web:1][web:22]  
+É um protótipo funcional com ar final — pode usar placeholders, mas tudo deve parecer produto acabado orientado a leads (potenciais cooperantes e proprietários).
 
 ## Stack técnica
-```
-Next.js 14 (App Router)
-TypeScript
-Tailwind CSS
-Framer Motion (todas as animações)
-React Hook Form + Zod (formulários)
-Lucide React (ícones)
-```
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion (todas as animações)
+- React Hook Form + Zod (formulários)
+- Lucide React (ícones)
+
+---
 
 ## Estrutura de páginas
-
-### `/` — Homepage
-### `/marcas` — Marcas representadas  
-### `/oficina` — Oficina e agendamento
-### `/contactos` — Contactos e localização
+- `/` — Homepage
+- `/como-funciona` — Modelo cooperativo
+- `/projetos` — Cooperativas e empreendimentos
+- `/sobre` — Sobre a co.op.homes
+- `/contacto` — Contacto
 
 ---
 
 ## Componentes globais
 
-### `TopBar`
-- Barra fina no topo (altura 36px), fundo `--color-dark`
-- Texto branco pequeno (12px), 3 mensagens a fazer scroll horizontal
-  em loop contínuo (CSS marquee ou Framer Motion):
-  - "🔧 Marque a sua oficina online — sem esperas ao telefone"
-  - "🚗 Concessionário oficial Toyota, Volvo, Fiat, Jeep e Abarth"
-  - "📍 Funchal, Madeira — Estrada Monumental"
-- Links clicáveis com texto colorido `--color-cyan`
+### TopBar
+- Barra fina no topo (altura 36px), fundo `--color-dark`.
+- Texto branco pequeno (12px), 3 mensagens em scroll horizontal contínuo:
+  - "🏠 Compre casa a preço de custo com o modelo cooperativo"
+  - "📊 Transparência total: plano de negócios aberto para todos os cooperantes"
+  - "📍 Projetos em Lisboa, Oeiras, Miraflores, Caparica e mais"[web:2][web:22]
+- Links clicáveis com texto em `--color-accent` (por ex.: "Saber mais sobre o modelo →" abre `/como-funciona`).
 
-### `Navbar`
-- Logo MGL à esquerda
-- Links de navegação centrados: Início | Marcas | Oficina | Contactos
-- Botão CTA à direita: "Marcar Oficina" (filled, --color-primary)
-- **Comportamento de scroll:**
-  - Sobre o hero: transparente, todos os elementos brancos
-  - Após 80px de scroll: fundo branco sólido, sombra subtil,
-    logo e links ficam escuros
-  - Transição suave 0.3s
-- Mobile: hamburger menu com drawer lateral
+### Navbar
+- Logo co.op.homes à esquerda.[web:22]
+- Links centrados: Início | Como Funciona | Projetos | Sobre | Contacto.
+- Botão CTA à direita: "Quero ser cooperante" (filled, `--color-primary`).
+- Comportamento de scroll:
+  - Sobre o hero: transparente, elementos em branco.
+  - Após 80px: fundo branco sólido, sombra subtil, logo e links escuros.
+  - Transição suave 0.3s.
+- Mobile: hamburger com drawer lateral, links verticais + CTA full width.
 
-### `Footer`
-- Fundo `#0a0f1e`
-- 3 colunas: Logo + tagline + redes sociais | Links rápidos | Contacto
-- Linha de separação no topo com gradiente azul
-- Copyright com texto cinzento 50% opacidade
-- Botão WhatsApp verde com ícone
+### Footer
+- Fundo `#071410`.
+- 3 colunas:
+  - Logo, tagline “Gestora de cooperativas de habitação — da origem do projeto à entrega da casa, chave-na-mão”.[web:2][web:23]
+  - Links rápidos (Como Funciona, Projetos, Sobre, Contacto, Política de Privacidade).
+  - Contacto (email, telefone, sede em Lisboa) + link para newsletter.[web:3]
+- Linha superior com gradiente verde.
+- Copyright cinzento 50%.
+- Botão flutuante WhatsApp verde com ícone.
 
 ---
 
 ## Página: Homepage (`/`)
 
 ### Secção 1 — Hero
-- Fullscreen (100vh), imagem `/public/images/stand-exterior.jpg`
-- Overlay gradiente: `linear-gradient(to right, rgba(10,15,30,0.9) 40%, rgba(10,15,30,0.3) 100%)`
-- Conteúdo alinhado à esquerda, verticalmente centrado:
-  - Label pequena acima: "CONCESSIONÁRIO OFICIAL · MADEIRA" (uppercase, tracking wide, cor ciano)
-  - Título principal em Bebas Neue: "O SEU CONCESSIONÁRIO NA MADEIRA" — 80px desktop, branco
-  - Subtítulo em DM Sans: "Oficina autorizada e concessionário oficial de várias marcas, com equipa especializada e atendimento próximo." — branco 70% opacidade
-  - 2 botões: "Marcar Oficina" (filled branco com texto escuro) + "Ver Marcas" (outline branco)
-- Métricas em linha na parte inferior do hero (antes do fold):
-  - "25+" / "Anos de Experiência"
-  - "5" / "Marcas Representadas"
-  - "100%" / "Serviço Certificado"
-  - Separadores verticais brancos 40% opacidade entre cada métrica
-  - Números grandes Bebas Neue 56px, labels DM Sans 11px uppercase
+- Fullscreen (100vh), imagem de contexto urbano / edifício residencial contemporâneo (ex.: `/public/images/hero-coop.jpg`).[web:22]
+- Overlay gradiente: `linear-gradient(to right, rgba(10,15,30,0.9) 40%, rgba(10,15,30,0.3) 100%)`.
+- Conteúdo alinhado à esquerda, centrado verticalmente:
+  - Label: "GESTORA DE COOPERATIVAS DE HABITAÇÃO" (uppercase, tracking largo, cor verde accent).[web:23]
+  - Título: "COMPRAR CASA A PREÇO DE CUSTO".[web:22]
+  - Subtítulo: explicação de que as cooperativas permitem comprar casa pagando apenas custos reais (terreno, projeto, obra), sem margem de promotor.[web:2][web:22]
+  - Botões:
+    - "Como funciona na prática" (filled branco → `/como-funciona`)
+    - "Ver projetos em destaque" (outline → âncora para secção de projetos).
+- Métricas em linha:
+  - "20–25%" / "Poupança média vs. mercado tradicional".[web:2][web:18]
+  - "100%" / "Transparência de custos".[web:2][web:22]
+  - "Dono desde o 1.º dia" / "Via quota na cooperativa".[web:2][web:19]
 
-### Secção 2 — Marcas
-- Fundo branco
-- Título com linha vermelha decorativa acima (3px height, 48px width, centrada)
-- 5 cards em linha: Toyota | Volvo | Fiat | Jeep | Abarth
+### Secção 2 — Como funciona (teaser)
+- Fundo branco.
+- Layout 2 colunas: texto + cards.
+- 3 passos (resumo de `/como-funciona`):
+  1. Juntar os cooperantes — interessados unem-se e subscrevem quotas.[web:2]
+  2. Financiar o projeto — financiam terreno, projeto e obra, pagando apenas custos reais.[web:2]
+  3. Entregar e escriturar — cada cooperante faz escritura da sua fração no final.[web:2]
+- Link: "Perceber o processo em detalhe →" para `/como-funciona`.
+
+### Secção 3 — Projetos em destaque
+- Fundo `--color-surface`.
+- Título: "Cooperativas em destaque".[web:22]
+- Grid de cards (3 colunas desktop).
 - Cada card:
-  - Fundo branco, border 1px `--color-border`, border-radius 16px
-  - Padding 32px 24px
-  - Logo marca centrado, 72px altura, em grayscale por defeito
-  - Nome da marca abaixo em DM Sans 14px
-  - **Hover:** grayscale remove, border muda para `--color-primary`,
-    translateY(-4px), box-shadow, botão "Ver stock →" aparece com slide-up
+  - Badge: "NOVA OPORTUNIDADE" ou "100% SUBSCRITO".[web:2][web:22]
+  - Nome: ex. "co.op. Caparica Hills II".[web:2]
+  - Localização + tipologias: ex. "Costa da Caparica · 52 apartamentos · T1 a T5".[web:2][web:6]
+  - Descrição curta (2–3 linhas).[web:6][web:8][web:12]
+  - CTA: "Ver projeto →" (link interno ou externo).
 
-### Secção 3 — Sobre / Métricas
-- Fundo `--color-primary` (#1e2d4a)
-- Layout: texto à esquerda + 3 métricas grandes à direita
-- Texto: "Mais de 25 anos a servir a Madeira" — parágrafo de contexto
-- Métricas com contador animado ao entrar no viewport:
-  - "+25" / "Anos"
-  - "+5.000" / "Clientes"
-  - "5" / "Marcas"
-- Números em Bebas Neue 72px branco, labels DM Sans 14px branco 60%
+### Secção 4 — Vantagens do modelo
+- Fundo `#132d1e`.
+- Texto introdutório: elimina margem do promotor, permite 20–25% de poupança + vantagens fiscais.[web:2][web:18]
+- 3 vantagens com ícone:
+  - Preço — “20–25% abaixo do mercado”.[web:2][web:18]
+  - Transparência — “Plano de negócios aberto aos cooperantes”.[web:2]
+  - Propriedade — “Proprietário desde o 1.º dia via quota”.[web:2][web:19]
+- Contadores animados (valores mock).
 
-### Secção 4 — Serviços (resumo)
-- Fundo `--color-surface`
-- 4 cards de serviço em grid 2x2:
-  1. Revisão e Manutenção
-  2. Mecânica e Diagnóstico
-  3. Colisão e Carroçaria
-  4. Peças e Balcão
-- Cada card: número de ordem (01-04) grande e bold em azul claro,
-  título, descrição curta, border-left azul que aparece no hover
-- CTA centrado abaixo: "Ver todos os serviços →"
+### Secção 5 — Testemunhos
+- Fundo claro.
+- Carrossel ou grid com 2–3 testemunhos de cooperantes (mock).[web:16][web:17]
+- Selo: "Modelo cooperativo · solução para quem não se conforma".[web:2][web:23]
 
-### Secção 5 — CTA Banner
-- Fundo com imagem da oficina + overlay escuro
-- Texto grande: "Pronto para marcar a sua visita?"
-- Subtexto + 2 botões: "Agendar Agora" + "Pedir Orçamento"
+### Secção 6 — CTA final
+- Fundo com imagem de projeto (Miraflores / Caparica Hills) + overlay escuro.[web:6][web:12][web:20]
+- Título: "Quer explorar se o modelo cooperativo é para si?".
+- Subtítulo: convite para agendar conversa ou pedir informação.[web:3]
+- Botões:
+  - "Falar com a equipa" (scroll para contacto / `/contacto`).
+  - "Ver oportunidades abertas" (âncora para projetos).
 
 ---
 
-## Página: Marcas (`/marcas`)
+## Página: Como Funciona (`/como-funciona`)
 
-### Hero simples
-- Fundo escuro, título "AS NOSSAS MARCAS" em Bebas Neue grande
-- Subtítulo descritivo
+### Hero
+- Fundo escuro com overlay.
+- Título: "COMO FUNCIONA O MODELO COOPERATIVO".
+- Subtítulo: "O lucro da sua casa é todo para si".[web:2]
 
-### Grid de marcas
-- 5 cards grandes (não em linha — grid 3+2 centrado)
-- Cada card expandido:
-  - Logo grande (120px)
-  - Nome da marca
-  - Descrição curta (2 linhas, placeholder genérico)
-  - Badge "Concessionário Oficial"
-  - Botão "Ver stock" → abre URL externa em novo tab
+### Secção — Explicação do modelo
+- O que é uma cooperativa de habitação: membros unem-se para financiar construção das suas casas, pagando custos reais.[web:2]
+- São eliminadas margens do promotor, tornando a habitação mais acessível.[web:2]
+- No fim, cada membro escriturará a sua fração, como num projeto em planta.[web:2]
+- Badges: "Sem promotor", "Plano de negócios aberto", "Proprietário desde o 1.º dia".[web:2]
 
----
+### Secção — Vantagens
+- Cards com ícones:
+  - Preço (20–25% abaixo do mercado + isenções fiscais).[web:2][web:18]
+  - Transparência (plano de negócios aberto).[web:2]
+  - Propriedade (quota na cooperativa).![web:2]
+- Cada card: título + subtítulo + 1–2 bullets.
 
-## Página: Oficina (`/oficina`)
+### Secção — Linha temporal
+- Timeline em 5 etapas:
+  1. Identificação de terreno / imóvel.[web:2]
+  2. Constituição da cooperativa e adesão de cooperantes.[web:2]
+  3. Aprovação de plano de negócios e financiamento.[web:2]
+  4. Construção com reporting transparente.[web:2]
+  5. Entrega, escritura e gestão pós-entrega.[web:2]
 
-### Hero da Oficina
-- Inspiração: mcoutinho.pt/oficina
-- Fundo escuro (#0a0f1e) com imagem da oficina em overlay
-- Título grande Bebas Neue: "OFICINA MGL"
-- Linha accent vermelha sob o título (estilo mcoutinho)
-- Subtítulo: "Nunca foi tão fácil. Marque online em minutos."
-- **Mini-formulário inline no hero** (estilo mcoutinho):
-  - Campo: Matrícula
-  - Select: Marca (Toyota/Volvo/Fiat/Jeep/Abarth)
-  - Botão: "Agendar Marcação →"
-
-### Grid de Serviços (visual)
-- Inspiração: grid de seleção de serviços do mcoutinho
-- 8 tiles em grid 4x2, cada tile com:
-  - Ícone Lucide centrado (stroke 1.5)
-  - Nome do serviço
-  - Border 1px, border-radius 12px
-  - Hover: border ciano, ícone fica colorido
-- Serviços: Revisão e Manutenção | Inspeção/IPO | Checkup |
-  Pneus e Alinhamento | Sistema de Travagem | Ar Condicionado |
-  Eletrónica | Colisão e Carroçaria
-
-### Como Funciona
-- 3 passos horizontais com linha conectora
-- Círculos numerados (1, 2, 3) fundo azul escuro
-- Ícone + título + descrição por passo:
-  1. Preenche o formulário online
-  2. Confirmamos a marcação por SMS/email
-  3. Entregue o carro na data combinada
-
-### Formulários (Tabs)
-- 2 tabs: "📅 Agendar Marcação" | "🔧 Pedir Orçamento"
-- Tab ativa com underline accent vermelho
-
-**Tab Agendamento:**
-- Grid 2 colunas:
-  - Nome completo | Telemóvel
-  - Email | Matrícula (formato AA-00-AA)
-  - Marca (select) | Tipo de serviço (select)
-  - Data preferida (date picker) | Hora preferida (select: 08:30-17:30)
-  - Observações (textarea, largura total)
-- Botão: "Enviar Pedido de Marcação" (largura total, 52px, bold)
-- POST para `/api/agendamento` (webhook placeholder)
-- Loading state + mensagem de sucesso após submit
-
-**Tab Orçamento:**
-- Grid 2 colunas:
-  - Nome completo | Telemóvel
-  - Email | Matrícula
-  - Marca (select) | Modelo (input)
-  - Tipo de serviço (select) | Urgência (select: Normal/Urgente)
-  - Descrição do problema (textarea, largura total)
-- Botão: "Pedir Orçamento Gratuito" (largura total, accent vermelho)
-- POST para `/api/orcamento`
-
-### Validação dos formulários
-- React Hook Form + Zod
-- Erros inline por campo (vermelho, small text)
-- Campo matrícula: validação formato português (AA-00-AA ou 00-AA-00)
-- Loading state no botão durante submit (spinner + "A enviar...")
-- Toast de sucesso: "✓ Pedido enviado! Entraremos em contacto em breve."
+### Secção — FAQ
+- Acordeão com 6–8 perguntas (mock), incluindo:
+  - Riscos vs. comprar em planta.
+  - Quem gere a cooperativa e papel da co.op.homes.[web:2][web:23]
+  - O que acontece se a obra atrasar, etc.
 
 ---
 
-## Página: Contactos (`/contactos`)
+## Página: Projetos (`/projetos`)
 
-### Layout 2 colunas
-- Esquerda: informação de contacto
-  - Cada item: ícone Lucide + label pequena + valor bold
-  - Telefone, Email, Morada, Horário
-  - Botão WhatsApp grande (verde #25d366)
-  - Botão "Ligar agora" (outline)
-- Direita: iframe Google Maps (placeholder com morada Funchal)
+### Hero
+- Fundo claro.
+- Título: "COOPERATIVAS E EMPREENDIMENTOS".
+- Subtítulo: referência a projetos 100% subscritos e novas oportunidades.[web:2][web:22]
+
+### Filtros
+- Localização (Lisboa, Oeiras, Caparica, Miraflores…).[web:2][web:6][web:8][web:12]
+- Estado (Novo, Em curso, 100% subscrito).[web:2][web:22]
+- Tipologia (T0–T5).[web:2]
+
+### Grid de projetos
+- Cards em 3 colunas desktop.
+- Para cada projeto:[web:2][web:22]
+  - Badge de estado.
+  - Nome: "co.op. Caparica Hills I/II", "co.op. João XXI", "co.op. Miraflores", "co.op. Oeiras Golf", "co.op. Sol ao Rato".[web:2][web:6][web:8][web:12]
+  - Localização + nº de apartamentos + tipologias.[web:2]
+  - Descrição curta.[web:6][web:8][web:12]
+  - CTA "Quero mais informação" ou "Ver detalhes".
+
+### Página de projeto (opcional)
+- Galeria de imagens.[web:6][web:8][web:12]
+- Mapa.
+- Tabela de tipologias (placeholder).
+- Secção "Porque este projeto".
+
+---
+
+## Página: Sobre (`/sobre`)
+
+### Hero
+- Fundo neutro.
+- Título: "SOBRE A CO.OP.HOMES".[web:1][web:22]
+- Subtítulo: “Nascida da inconformidade com o mercado residencial, para reinventar a forma de comprar casa”.[web:1][web:23]
+
+### Secção — Missão
+- co.op.homes é uma sociedade gestora de cooperativas de habitação que coordena todo o processo para adquirir casa a preço de custo.[web:2][web:22][web:23]
+- Identifica oportunidades, agrega cooperantes e gere a construção até à entrega chave‑na‑mão.[web:2][web:22]
+
+### Secção — O que fazemos
+- 3 cards:
+  - Originação de projetos.[web:2][web:23]
+  - Estruturação de cooperativas e plano de negócios.[web:2]
+  - Gestão integrada da construção.[web:2][web:23]
+
+### Secção — Equipa
+- Cards com foto, nome e cargo (mock) para os elementos principais.[web:10][web:22]
+- CTA "Falar com a equipa" → `/contacto`.
+
+---
+
+## Página: Contacto (`/contacto`)
+
+### Layout
+- Duas colunas: info de contacto + formulário.[web:3]
+
+### Informação de contacto
+- Telefone geral.
+- Email geral.
+- Morada (Lisboa, conforme site).[web:3]
+- Texto: "Estamos disponíveis para esclarecer dúvidas sobre o modelo cooperativo ou projetos em curso".[web:3]
+
+### Formulário
+- Campos:
+  - Nome completo.
+  - Email.
+  - Telemóvel.
+  - Tipo de pedido (select).
+  - Projeto de interesse (select com lista + "Ainda não sei").[web:2][web:22]
+  - Mensagem.
+- Botão: "Enviar mensagem".
+- POST para `/api/contacto`.
+- Loading + mensagem de sucesso.
+
+---
+
+## Formulários, validação e UX
+- React Hook Form + Zod.
+- Erros inline em vermelho.
+- Validação de email e telemóvel PT.
+- Botões com estado de loading.
+- Toast de sucesso global.
 
 ---
 
 ## Animações (Framer Motion)
-
-### Regras globais
-- Todas as secções entram com: `opacity: 0 → 1` + `y: 40 → 0`
-- Duração base: 0.6s, easing: `[0.25, 0.1, 0.25, 1]`
-- Cards em stagger: delay 0.1s entre cada um
-- Trigger: `whileInView` com `once: true`, `margin: "-100px"`
-
-### Animações específicas
-- **Contador de números** (métricas): animação de 0 → valor final,
-  duração 2s, easing ease-out, trigger ao entrar no viewport
-- **Navbar:** transição de cor com spring suave
-- **Cards de marcas:** hover com spring `stiffness: 300, damping: 20`
-- **Botões:** `whileHover: scale(1.02)`, `whileTap: scale(0.98)`
-- **Hero:** animação de entrada staggered — label → título → subtítulo → botões → métricas
+- Secções com fade + slide up.
+- Duração 0.6s, easing `[0.25, 0.1, 0.25, 1]`.
+- Stagger em cards.
+- Navbar com transição de cor ao scroll.
+- Hovers em cards com spring.
+- Botões com `whileHover` e `whileTap`.
+- Hero com sequência label → título → subtítulo → botões → métricas.
 
 ---
 
 ## Qualidade e standards
 
 ### Performance
-- `next/image` para todas as imagens com sizes corretos
-- `loading="lazy"` em imagens abaixo do fold
-- Fontes com `display=swap`
+- `next/image` em todas as imagens (com `sizes`).
+- `loading="lazy"` abaixo do fold.
+- Fontes com `display=swap`.
 
 ### Acessibilidade
-- Todos os inputs com `label` e `htmlFor`
-- Botões com aria-labels onde necessário
-- Contraste mínimo AA
+- Inputs com `label`/`htmlFor`.
+- `aria-label` onde necessário.
+- Contraste mínimo AA.
 
 ### Responsivo
-- Mobile-first
-- Breakpoints: sm(640) md(768) lg(1024) xl(1280)
-- Navbar colapsa em hamburger abaixo de 768px
-- Grids passam a 1 coluna em mobile
+- Mobile‑first.
+- Breakpoints: `sm` 640, `md` 768, `lg` 1024, `xl` 1280.
+- Navbar em hamburger abaixo de `md`.
+- Grids → 1 coluna em mobile.
 
 ### Código
-- TypeScript strict
-- Componentes em `/components/` com nomes descritivos
-- Dados mockados em `/lib/data.ts` (marcas, serviços, etc.)
-- Sem `any` types
-- `npm run build` deve passar sem erros
+- TypeScript strict.
+- Componentes em `/components`.
+- Dados mock em `/lib/data.ts` (projetos, vantagens, FAQ, equipa).[web:2][web:22]
+- Sem `any`.
+- `npm run build` sem erros.
 
 ---
 
-## Ordem de construção recomendada
-
-1. Setup Next.js + instalar dependências
-2. `/lib/data.ts` — dados das marcas e serviços
-3. Componentes globais: `TopBar`, `Navbar`, `Footer`
-4. Homepage completa
-5. Página `/oficina` com formulários
-6. Página `/marcas`
-7. Página `/contactos`
-8. Revisão final de animações e responsivo
-9. `npm run build` — zero erros
+## Ordem de construção
+1. Setup Next.js + dependências.
+2. Criar `/lib/data.ts` (projetos, vantagens, FAQ, equipa).[web:2][web:22]
+3. Componentes globais: TopBar, Navbar, Footer, Section, Container.
+4. Homepage completa.
+5. Página `/como-funciona`.
+6. Página `/projetos`.
+7. Página `/sobre`.
+8. Página `/contacto`.
+9. Review animações, responsivo e acessibilidade.
+10. `npm run build`.

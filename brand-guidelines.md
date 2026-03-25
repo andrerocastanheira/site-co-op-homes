@@ -1,79 +1,201 @@
-# MGL – Mendes Gomes | Brand Guidelines
+# co.op.homes · Brand Guidelines
 
 ## Identidade
-- **Nome completo:** MGL – Mendes Gomes
-- **Localização:** Funchal, Madeira, Portugal
-- **Tipo:** Concessionário multimarca e oficina autorizada
-- **Tagline:** "O seu concessionário na Madeira"
 
-## Marcas representadas
-| Marca | URL stock externo |
-|-------|-------------------|
-| Toyota | https://www.toyota.pt |
-| Volvo | https://www.volvocars.com/pt |
-| Fiat | https://www.fiat.pt |
-| Jeep | https://www.jeep.pt |
-| Abarth | https://www.abarth.pt |
+- **Nome completo:** co.op.homes
+- **Localização:** Lisboa, Portugal
+- **Tipo:** Sociedade gestora de cooperativas de habitação (fintech imobiliária)
+- **Tagline principal:** "A sua casa de sonho, a preço de custo."
+- **Tagline de apoio:** "Reinventar a forma de comprar casa."
 
-## Paleta de cores
+---
+
+## Proposta de Valor
+
+- Comprar casa pagando apenas os custos reais: terreno, projetos e obra.
+- Eliminar a margem do promotor, gerando poupanças de 20–25% face ao mercado tradicional.
+- Transparência total: plano de negócios aberto a todos os cooperantes.
+- Propriedade desde o primeiro dia, via quota na cooperativa.
+
+---
+
+## Paleta de Cores
+
+> Tom verde — natureza, sustentabilidade, crescimento. Fundos claros.
+
+```css
+--color-primary:        #1c6b45;  /* Verde floresta — confiança, natureza */
+--color-primary-hover:  #155235;
+--color-accent:         #52b788;  /* Verde sage/mint — destaques e links */
+--color-accent-soft:    #d8f3dc;  /* Fundo suave de badges */
+--color-bg:             #ffffff;  /* Fundo principal */
+--color-surface:        #f5f7fb;  /* Secções alternadas, cards */
+--color-dark:           #0a1a0e;  /* Hero escuro, overlays, footer */
+--color-text:           #111827;  /* Texto principal */
+--color-text-muted:     #6b7280;  /* Texto secundário */
+--color-border:         #e1e5f0;  /* Bordas de cards e inputs */
+--color-success:        #16a34a;  /* Estados positivos / 100% subscrito */
+--color-warning:        #f97316;  /* Avisos, prazos */
 ```
---color-primary:     #1e2d4a   /* Azul escuro — cor principal */
---color-primary-hover: #16223a
---color-accent:      #c41e1e   /* Vermelho — linha decorativa, CTAs secundários */
---color-cyan:        #00d4d4   /* Ciano — usado com moderação para highlights */
---color-bg:          #ffffff
---color-surface:     #f8f9fa   /* Fundo de secções alternadas */
---color-dark:        #0a0f1e   /* Footer, hero overlay */
---color-text:        #0f172a
---color-text-muted:  #64748b
---color-border:      #e5e7eb
-```
+
+---
 
 ## Tipografia
-- **Display / Headings:** `Bebas Neue` — impacto, autoridade, automóvel
-- **Body / UI:** `DM Sans` — legível, moderno, acessível
-- **Pesos:** headings 400 (Bebas), body 400/500/600 (DM Sans)
-- **Google Fonts import:**
-  ```
-  Bebas+Neue:wght@400&family=DM+Sans:wght@400;500;600;700
-  ```
+
+### Logo
+
+- Manter exatamente o lettering atual do logotipo co.op.homes (não recriar em CSS).
+- Usar sempre o ficheiro fornecido (SVG ou PNG) em vez de tentar replicar a fonte.
+- Não alterar cor, espaçamento ou proporções.
+
+### UI e Headings
+
+**Headings: Space Grotesk**
+- Uso: H1–H3, métricas, labels de secção.
+- Pesos: 500 e 600.
+
+**Body / UI: Inter**
+- Uso: parágrafos, formulários, botões, microcopy.
+- Pesos: 400 (body), 500 (labels e botões), 600 (subtítulos).
+
+---
 
 ## Iconografia
-- Biblioteca: `lucide-react`
-- Estilo: outline, stroke-width 1.5
-- Tamanho base: 24px
 
-## Tom de comunicação
-- Premium mas próximo — não é uma marca de luxo fria
-- Madeirense com orgulho — mencionar Madeira, Funchal, ilhas
-- Claro e direto — sem jargão técnico desnecessário
+- **Biblioteca:** lucide-react
+- **Estilo:** outline, stroke-width: 1.5
+- **Tamanho base:** 24px
+- **Usos principais:**
+  - Vantagens (preço, transparência, propriedade)
+  - Passos "Como funciona"
+  - Itens de contacto, FAQ, alertas
 
-## Contactos (placeholder — confirmar com cliente)
-- **Telefone:** +351 291 000 000
-- **Email:** geral@mgl.pt
-- **Morada:** Estrada Monumental, Funchal, Madeira
-- **WhatsApp:** +351 291 000 000
-- **Horário:** Seg–Sex 08:30–18:00 | Sáb 09:00–13:00
+---
 
-## Assets disponíveis em /public/images/
-- Logo-mgl.png — logo principal (preto, usar na navbar clara)
-- imagem_mgl.jpg — fachada do stand (hero secundário)
-- slider_volvo-2.jpg — lineup Volvo (hero principal, mais impactante)
-- roda_manutencao.png — técnico a trabalhar em travão
-- manutencao_carro-2.png — oficina com carro elevado
+## Tom de Comunicação
 
-## Logos de marcas em /public/images/brands/
-- marca_toyota.png
-- marca_volvo.png
-- marca_fiat.png
-- marca_fiatProfissional.png
-- marca_jeep.png
-- marca_Abarth.png
-- marca_alfaRomeu.png
+### Princípios
 
-## Nota importante sobre logos
-Os logos das marcas têm fundos escuros — não são PNG 
-transparentes. Renderiza cada card de marca com fundo 
-#1a1a1a ou #111 em vez de branco, assim os logos 
-integram naturalmente. No hover o card fica ligeiramente 
-mais claro (#2a2a2a). Isto também dá um look mais premium.
+- Mistura de fintech com imobiliário: didático, orientado a números e acessibilidade.
+- Clareza radical: explicar sempre como funciona, com exemplos concretos.
+- Transparência: não esconder riscos nem complexidade do modelo cooperativo.
+
+### Estilo
+
+- Frases curtas, voz ativa.
+- Evitar jargão jurídico; quando usar, explicar logo a seguir em linguagem simples.
+- Repetir conceitos chave:
+  - "preço de custo"
+  - "poupança média de 20–25%"
+  - "plano de negócios aberto"
+  - "proprietário desde o primeiro dia"
+
+### Exemplos de Copy
+
+- "A sua casa de sonho, a preço de custo."
+- "Sem margem de promotor, com total transparência em todos os custos."
+- "Quaisquer reduções de custo revertem integralmente a favor dos cooperantes."
+
+---
+
+## Contactos (para layouts)
+
+- Página de contacto: usar telefone, email e morada tal como aparecem em `/contacto`.
+- Call to action preferencial: levar utilizador ao formulário de contacto.
+- Tom nos contactos: próximo, sem formalismo excessivo, mas profissional.
+
+---
+
+## Diretrizes de Imagem
+
+### Mood Visual
+
+- Fintech imobiliário: luz natural, arquitetura contemporânea, fotografia limpa.
+- Evitar filtros pesados e cores muito quentes.
+- Paleta de imagem: brancos, cinzas claros, azuis e verdes suaves.
+
+### Imagens a Reutilizar do Site
+
+**Homepage hero**
+- Exportar a imagem hero atual da home e guardar como `/public/images/hero-home.jpg`.
+
+**Projetos**
+- Caparica Hills: `/public/images/projects/caparica-hills.jpg`
+- Miraflores: `/public/images/projects/miraflores.jpg`
+- Oeiras Golf: `/public/images/projects/oeiras-golf.jpg`
+- Sol ao Rato: `/public/images/projects/sol-ao-rato.jpg`
+
+**Equipa**
+- Diretório recomendado: `/public/images/team/`
+- Ficheiros:
+  - `/public/images/team/frederico.jpg`
+  - `/public/images/team/jose-cunha.jpg`
+  - `/public/images/team/jose-ribeiro.jpg`
+  - `/public/images/team/afonso.jpg`
+- Origem: fotos usadas na página "A Equipa" do site atual.[web:10][web:22]
+- Uso: secção de equipa na página `/sobre` (cards com foto + nome + cargo).
+
+### Regras
+
+- Sempre que falar de um projeto específico, usar a foto real desse projeto.
+- Em mobile, recortar a imagem focando no edifício, não tanto no céu.
+
+---
+
+## Aplicação da Identidade
+
+### Hero da Homepage
+
+- Fundo: `hero-home.jpg` com overlay em `--color-dark` e gradiente.
+- Heading: Space Grotesk 600 com o texto "A sua casa de sonho, a preço de custo."
+- Subtítulo: Inter 400, explicar em 2–3 linhas o modelo cooperativo e a poupança.
+- Botões:
+  - Filled `--color-primary`: "Como funciona o modelo"
+  - Outline `--color-primary`: "Ver cooperativas em destaque"
+
+### Cards de Projeto
+
+- Fundo `--color-surface`, borda `--color-border`
+- Topo com imagem do projeto (16:9)
+- Badge de estado:
+  - "NOVA OPORTUNIDADE" com fundo `--color-primary`
+  - "100% SUBSCRITO" com fundo `--color-success`
+- Conteúdo:
+  - Título em Space Grotesk 600
+  - Linha com localização, nº de apartamentos, tipologias
+  - CTA em Inter 500: "Quero mais informação"
+
+### Secção "Como Funciona"
+
+- 3–5 passos, cada um com ícone Lucide.
+- Cards brancos, borda suave, título em Space Grotesk e texto em Inter.
+- Palavras chave a **bold**: "custos reais", "sem promotor", "plano de negócios aberto".
+
+### Secção "Equipa"
+
+- Fotos reais da página "A Equipa".
+- Nome em Space Grotesk 600.
+- Cargo em Inter 400, cor `--color-text-muted`.
+
+---
+
+## Voz e Disclaimers
+
+- Evitar promessas absolutas como "sem risco" ou "garantia total".
+- Sempre que mencionar poupanças: *"Os valores apresentados são estimativas e podem variar consoante o projeto."*
+- Em páginas técnicas (Como funciona): incluir bloco a explicar riscos semelhantes à compra em planta.
+
+---
+
+## Componentes Recomendados
+
+| Componente | Descrição |
+|---|---|
+| `Logo` | Variante light/dark, usando sempre o ficheiro oficial |
+| `TopBar` | Mensagens sobre preço de custo, transparência e propriedade |
+| `Navbar` | Com CTA "Quero ser cooperante" |
+| `HeroHome` | Hero da homepage com imagem de projeto real |
+| `ProjectCard` | Cards de cooperativas em destaque |
+| `AdvantageCard` | Vantagens do modelo (preço, transparência, propriedade) |
+| `StepCard` | Passos "Como funciona" |
+| `TeamMemberCard` | Cartões da equipa |
