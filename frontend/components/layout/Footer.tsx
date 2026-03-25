@@ -26,7 +26,7 @@ export default function Footer() {
               co.op.homes
             </Link>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
-              Gestora de cooperativas de habitação — da origem do projeto à entrega da casa, chave-na-mão.
+              Gestora de cooperativas de habitação. Da origem do projeto à entrega da casa, chave-na-mão.
             </p>
             <p className="mt-4 text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
               Compre a sua casa a preço de custo. Sem margem de promotor, com total transparência.

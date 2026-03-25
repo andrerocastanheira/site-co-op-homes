@@ -35,7 +35,7 @@ export default function TopBar() {
           <span
             key={i}
             className="inline-flex items-center text-white/80 text-xs font-medium"
-            style={{ paddingLeft: '3rem', paddingRight: '3rem' }}
+            style={{ paddingLeft: '1.5rem', paddingRight: '1.5rem' }}
           >
             {msg}
             <span className="mx-6 text-white/30">|</span>

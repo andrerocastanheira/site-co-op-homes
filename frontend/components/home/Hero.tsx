@@ -83,7 +83,7 @@ export default function Hero() {
             style={{ color: 'rgba(255,255,255,0.75)' }}
           >
             Através do modelo cooperativo, os futuros proprietários unem-se para construir
-            as suas casas diretamente — pagando apenas os custos reais de construção,
+            as suas casas diretamente, pagando apenas os custos reais de construção,
             sem margem de promotor e com total transparência em cada euro gasto.
           </motion.p>
 

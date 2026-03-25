@@ -39,7 +39,7 @@ const steps = [
     number: '02',
     title: 'Financiar o projeto',
     description:
-      'Financiam terreno, projeto e obra, pagando apenas os custos reais — sem margem de promotor nem comissões comerciais.',
+      'Financiam terreno, projeto e obra, pagando apenas os custos reais, sem margem de promotor nem comissões comerciais.',
   },
   {
     number: '03',

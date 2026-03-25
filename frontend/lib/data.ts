@@ -148,7 +148,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: 'Miguel Ferreira',
-    text: 'O que me convenceu foi a transparência. Vi o plano de negócios completo antes de assinar. A co.op.homes não tem margem escondida — pagamos mesmo o custo real da construção. É um conceito revolucionário no mercado português.',
+    text: 'O que me convenceu foi a transparência. Vi o plano de negócios completo antes de assinar. A co.op.homes não tem margem escondida: pagamos mesmo o custo real da construção. É um conceito revolucionário no mercado português.',
     location: 'Cooperante em Oeiras Golf',
     initials: 'MF',
   },
@@ -164,17 +164,17 @@ export const faqItems: FaqItem[] = [
   {
     question: 'Quais são os riscos de participar numa cooperativa de habitação?',
     answer:
-      'Como em qualquer projeto imobiliário, existem riscos associados — principalmente atrasos de obra e variações de custo. No modelo cooperativo da co.op.homes, esses riscos são mitigados por: plano de negócios detalhado e auditado, conta bancária segregada por projeto, seguro de caução obrigatório, e reporting mensal transparente. Os cooperantes têm sempre acesso completo à informação e participam nas decisões coletivas.',
+      'Como em qualquer projeto imobiliário, existem riscos associados, principalmente atrasos de obra e variações de custo. No modelo cooperativo da co.op.homes, esses riscos são mitigados por: plano de negócios detalhado e auditado, conta bancária segregada por projeto, seguro de caução obrigatório, e reporting mensal transparente. Os cooperantes têm sempre acesso completo à informação e participam nas decisões coletivas.',
   },
   {
     question: 'Quem gere a cooperativa e toma as decisões?',
     answer:
-      'A cooperativa é gerida pelos próprios cooperantes, com a co.op.homes a atuar como gestora profissional. As decisões estratégicas são tomadas em Assembleia Geral, onde cada cooperante tem direito de voto. A co.op.homes é responsável pela execução operacional — seleção de empreiteiros, gestão de obra, contabilidade e conformidade legal — reportando regularmente aos cooperantes.',
+      'A cooperativa é gerida pelos próprios cooperantes, com a co.op.homes a atuar como gestora profissional. As decisões estratégicas são tomadas em Assembleia Geral, onde cada cooperante tem direito de voto. A co.op.homes é responsável pela execução operacional: seleção de empreiteiros, gestão de obra, contabilidade e conformidade legal, reportando regularmente aos cooperantes.',
   },
   {
     question: 'O que acontece se houver atrasos na obra?',
     answer:
-      'Atrasos são possíveis em qualquer construção. No nosso modelo, os cooperantes são informados atempadamente através dos relatórios mensais. As causas são identificadas e comunicadas com transparência. Caso os atrasos sejam imputáveis a terceiros (empreiteiro, fornecedores), a cooperativa aciona as garantias contratuais. Não há penalizações diretas para os cooperantes — o custo final é de construção, independentemente do prazo.',
+      'Atrasos são possíveis em qualquer construção. No nosso modelo, os cooperantes são informados atempadamente através dos relatórios mensais. As causas são identificadas e comunicadas com transparência. Caso os atrasos sejam imputáveis a terceiros (empreiteiro, fornecedores), a cooperativa aciona as garantias contratuais. Não há penalizações diretas para os cooperantes. O custo final é de construção, independentemente do prazo.',
   },
   {
     question: 'Quais são os custos de entrada e como funcionam os pagamentos?',

@@ -80,7 +80,7 @@ export default function SobrePage() {
                 A co.op.homes nasceu da convicção de que o acesso à habitação própria não deve depender de margens de promotor. Num mercado onde a distância entre o custo real de construção e o preço de venda é sistematicamente alargada, decidimos construir uma alternativa.
               </p>
               <p>
-                Somos uma gestora profissional de cooperativas de habitação. O nosso modelo é simples: identificamos os terrenos certos, estruturamos cooperativas com rigor jurídico e financeiro, gerimos a construção com transparência total e entregamos as casas chave-na-mão — tudo com planos de negócios abertos e reporting mensal.
+                Somos uma gestora profissional de cooperativas de habitação. O nosso modelo é simples: identificamos os terrenos certos, estruturamos cooperativas com rigor jurídico e financeiro, gerimos a construção com transparência total e entregamos as casas chave-na-mão, com planos de negócios abertos e reporting mensal.
               </p>
               <p>
                 Não somos promotores. Não temos margem comercial sobre a construção. O nosso interesse está alinhado com o dos cooperantes: entregar a melhor casa, pelo menor custo possível, no prazo definido.
